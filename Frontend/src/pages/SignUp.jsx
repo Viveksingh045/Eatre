@@ -47,12 +47,12 @@ function SignUp() {
         {/* email */}
         <div className='mb-4'>
           <label htmlFor='email' className='block text-sm font-medium mb-1'>Email</label>
-          <input type='email' id='email' className='border border-gray-300 rounded-md p-2 w-full' placeholder='john.doe@example.com' style={{ border: `1px solid ${borderColor}` }} onChange={(e) => setEmail(e.target.value)} value={email} />
+          <input type='email' id='email' className='border border-gray-300 rounded-md p-2 w-full' placeholder='sample@gmail.com' style={{ border: `1px solid ${borderColor}` }} onChange={(e) => setEmail(e.target.value)} value={email} />
         </div>
         {/* Mobile */}
         <div className='mb-4'>
           <label htmlFor='mobile' className='block text-sm font-medium mb-1'>Mobile</label>
-          <input type='text' id='mobile' className='border border-gray-300 rounded-md p-2 w-full' placeholder='+1 234 567 890' style={{ border: `1px solid ${borderColor}` }} onChange={(e) => setMobile(e.target.value)} value={mobile} />
+          <input type='text' id='mobile' className='border border-gray-300 rounded-md p-2 w-full' placeholder='+91 ' style={{ border: `1px solid ${borderColor}` }} onChange={(e) => setMobile(e.target.value)} value={mobile} />
         </div>
         {/* password */}
         <div className='mb-4'>
@@ -82,7 +82,7 @@ function SignUp() {
         <button className='w-full mt-4 flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2 hover:bg-gray-100 transition-colors cursor-pointer' style={{ border: `1px solid ${borderColor}` }}>
           <FcGoogle size={20} /><span>Sign up with Google</span>
         </button>
-        <p className='text-center mt-2'>Already have an account? <a href="/signin" className='text-[#ff4d2d] font-semibold'>Log in</a></p>
+        <p className='text-center mt-2'>Already have an account? <a href="/signin" className='text-[#ff4d2d] font-semibold'>Sign in</a></p>
       </div>
       
     </div>
