@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { TiEye } from "react-icons/ti";
 import { FaEyeSlash } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc"
+import { FcGoogle } from "react-icons/fc";
 import axios from 'axios';
+import { serverURL } from "../App"; 
 
 
 function SignUp() {
@@ -16,7 +17,7 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
-  const { serverURL } = '../App';
+ 
 
   const handleSignUp=async()=>{
     try {
@@ -24,7 +25,7 @@ function SignUp() {
         fullName,email,mobile,password,role
       },{ withCredentials:true
       })
-    console.log( result);
+    console.log(result);
 
     }catch (error) {
       console.log("Error during sign up:", error);
@@ -63,7 +64,7 @@ function SignUp() {
         <div className='mb-4'>
           <label htmlFor='role' className='block text-sm font-medium mb-1'>Role</label>
           <div className='flex gap-2'>
-            {["User", "Owner", "Delivery Boy"].map((r) => (
+            {["user", "owner", "delivery boy"].map((r) => (
               <button className='flex-1 border rounded-lg px-3 py-2 text-center font-medium transition-colors cursor-pointer' 
               onClick={() => setRole(r)} 
               style={
